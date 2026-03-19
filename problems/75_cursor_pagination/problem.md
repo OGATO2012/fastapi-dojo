@@ -16,5 +16,5 @@ Implement cursor-based pagination.
 ## 期待される動作 / Expected Behavior
 
 - カーソルは最後に見たアイテムのidを表す / Cursor represents the id of the last item seen
-- `next_cursor` = 返したアイテムの最後のid (limitと同数の場合)、それ以外は null / next_cursor = last item's id if len == limit, else None
+- `next_cursor` = 返したアイテムの最後のid (さらにアイテムが存在する場合)、それ以外は null / next_cursor = last item's id if more items exist beyond this page, else None
 - カーソルなしでは最初のlimit件を返す / Without cursor, returns first `limit` items
